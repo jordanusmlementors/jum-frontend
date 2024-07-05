@@ -36,7 +36,7 @@ export default async function TutorialPage({ params }: IProps) {
   }`, { slug: params.slug });
 
   return (
-    <div className="min-h-screen text-center bg-gray-900 px-5 sm:px-20 py-10">
+    <div className="min-h-screen text-center bg-gray-900 px-5 sm:px-20 py-10 text-white">
       <h1 className="text-5xl font-bold py-4">{tutorial.title}</h1>
       <p className="text-lg my-2">{tutorial.description}</p>
       <div className="my-10 flex flex-col items-center">
