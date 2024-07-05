@@ -8,8 +8,8 @@ interface IProps {
 }
 
 interface IFile {
-  title: string,
-  url: string
+  title: string[],
+  url: string[]
 }
 
 interface IVideo {
@@ -51,11 +51,16 @@ export default async function TutorialPage({ params }: IProps) {
             <div
               className="collapse-content bg-slate-700 text-primary-content peer-checked:bg-slate-700 peer-checked:text-secondary-content">
               <YoutubeIframe key={video.url} link={video.url} className="flex justify-center mt-2" />
-              {video.files?.map((file: IFile) => (
-                <div key={file.url}>
-                  <a className="text-md font-bold py-4 btn btn-info my-3" target="_blank" href={file.url}>Download: {file.title}</a>
-                </div>
-              ))}
+              {video.files?.map((file: IFile) => {
+
+                const fileList: { url: string, title: string }[] = file.url.map((url: string, index: number) => ({ url, title: file.title[index] }));
+
+                return fileList.map((file: { url: string, title: string }) => (
+                  <div key={file.url} className="flex justify-center">
+                    <a className="text-md font-bold py-4 btn btn-info my-3" target="_blank" href={file.url}>Download: {file.title}</a>
+                  </div>
+                ))
+              })}
             </div>
           </div>
         )) : <div className="text-xl font-bold py-4">No videos yet!</div>}

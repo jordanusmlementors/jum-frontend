@@ -37,7 +37,7 @@ export default function MainPoints() {
         <div>
           <h1 className="text-3xl font-bold my-5">Preparation and Resources</h1>
           <p className="text-xl">
-            Effective preparation involves thorough review of medical textbooks, practice questions, online resources, and possibly participation in review courses. Study strategies often include creating personalized study schedules and focusing on high-yield topics relevant to each exam step
+            Effective preparation involves thorough review of medical textbooks, practice questions, online resources, and possibly participation in review courses. Study strategies often include creating personalized study schedules and focusing on high-yield topics relevant to each exam step.
           </p>
         </div>
         <Image
