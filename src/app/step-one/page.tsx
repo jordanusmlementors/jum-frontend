@@ -18,7 +18,7 @@ export default async function StepOne() {
 
   return (
     <div className="text-white min-h-screen bg-gray-900 px-5 sm:px-20 py-10">
-      <h1 className="text-5xl font-bold text-center py-4">Step One</h1>
+      <h1 className="text-5xl font-bold text-center py-4">Step 1</h1>
       <div className="grid place-items-center grid-cols-1 lg:grid-cols-2 gap-4">
         {tutorials.map((tutorial: Tutorial) => (
           <>

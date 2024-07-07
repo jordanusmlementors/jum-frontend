@@ -27,10 +27,10 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/step-one">Step One</Link>
+            <Link href="/step-one">Step 1</Link>
           </li>
           <li>
-            <Link href="/quizes">Quizes</Link>
+            <Link href="/quizes">quizzes</Link>
           </li>
           <li>
             <Link href="/about">About</Link>
@@ -48,10 +48,10 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/step-one">Step One</Link>
+            <Link href="/step-one">Step 1</Link>
           </li>
           <li>
-            <Link href="/quizes">Quizes</Link>
+            <Link href="/quizes">Quizzes</Link>
           </li>
           <li>
             <Link href="/about">About</Link>
