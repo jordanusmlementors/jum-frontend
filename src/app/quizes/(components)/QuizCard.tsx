@@ -12,7 +12,7 @@ export default function QuizCard({ title, slug }: IProps) {
         <h2 className="card-title">{title}</h2>
         <div className="card-actions justify-end">
           <Link href={`/quizes/${slug.current}`}>
-            <button className="btn">See Quizzes</button>
+            <button className="btn">See Subjects</button>
           </Link>
         </div>
       </div>
