@@ -13,11 +13,19 @@ export default async function System({ params }: { params: { system: string } })
 
   return (
     <div className="min-h-screen bg-gray-900 px-5 sm:px-20 py-10 text-white">
-      {subjects ? subjects.map((subject: { title: string, slug: { current: string } }) => (
-        <Link href={`/quizes/${params.system}/${subject.slug.current}`} key={subject.slug.current}>
-          <h1 className="rounded-lg bg-blue-950 w-full shadow-xl p-4 my-2 text-5xl text-center py-4">{subject.title}</h1>
-        </Link>
-      )) : <h1 className="text-5xl font-bold text-center py-4">No Subjects</h1>}
+      <h1 className="text-5xl font-bold text-center py-4">Subjets</h1>
+      <div className="grid place-items-start grid-cols-1 gap-4 md:grid-cols-2">
+        {subjects ? subjects.map((subject: { title: string, slug: { current: string } }) => (
+          <div className="my-2 text-white card bg-black h-full w-full shadow-xl">
+            <div className="card-body">
+              <h2 className="card-title">{subject.title}</h2>
+              <div className="card-actions justify-end">
+                <Link className="btn btn-primary" href={`/quizes/${params.system}/${subject.slug.current}`} key={subject.slug.current}>Buy Now</Link>
+              </div>
+            </div>
+          </div>
+        )) : <h1 className="text-5xl font-bold text-center py-4">No Subjects</h1>}
+      </div>
     </div>
   );
 }
